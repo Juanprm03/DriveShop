@@ -17,12 +17,12 @@ function NavBar() {
         <nav>
           <ul className="flex items-center space-x-6">
             <li>
-              <a href="/index" className="text-gray-600 hover:text-gray-800 transition duration-300 flex items-center space-x-2">
+              <a href="/home" className="text-gray-600 hover:text-gray-800 transition duration-300 flex items-center space-x-2">
                 <span>Home</span>
               </a>
             </li>
             <li>
-              <a href="/register" className="text-gray-600 hover:text-gray-800 transition duration-300 flex items-center space-x-2">
+              <a href="/registerProduct" className="text-gray-600 hover:text-gray-800 transition duration-300 flex items-center space-x-2">
                 <AiOutlineUserAdd className="text-gray-600 hover:text-gray-800" size={20} />
                 <span>Registrar Vehículo</span>
               </a>
