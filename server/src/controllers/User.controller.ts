@@ -2,6 +2,15 @@ import { Request, Response } from 'express';
 import User from '../models/User.model';
 import bcrypt from 'bcryptjs';
 
+declare module 'express-session' {
+    interface SessionData {
+      user: {
+        id: string;
+        email: string;
+      };
+    }
+  };
+
 // Crear un nuevo usuario
 const createUser = async (req: Request, res: Response) => {
     try {
@@ -75,10 +84,14 @@ const login = async (req: Request, res: Response) => {
     }
 
     // Guardar sesión del usuario
-    (req.session as any).user = {
-      id: user._id,
-      email: user.email,
-    };
+    if (req.session) {
+        req.session.user = {
+          id: user._id.toString(),
+          email: user.email,
+        };
+      } else {
+        return res.status(500).json({ message: 'Session not initialized' });
+      }
 
     res.status(200).json({ message: 'Login successful' });
   } catch (err) {

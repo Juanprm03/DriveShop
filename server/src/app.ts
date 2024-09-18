@@ -12,24 +12,15 @@ import AutoRoutes from './routes/auto';
 
 dotenv.config();
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 app.use(helmet());
 app.use(morgan('dev'));
 
-
-// Rutas
-app.get('/', (req, res) => {
-    res.send('Welcome to the CRUD API!');
-  });
-  
-app.use('/api/users', UserRoutes);
-app.use('/api/persons', PersonRoutes);
-app.use('/api/autos', AutoRoutes);
-
 // Configuración de la sesión con MongoStore
 app.use(session({
-    secret: process.env.SESSION_SECRET!,
+    secret: process.env.SESSION_SECRET_KEY!,
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -39,6 +30,17 @@ app.use(session({
     mongoUrl: process.env.ATLAS_URI,
     }),
   }));
+  
+// Rutas
+app.get('/', (req, res) => {
+    res.send('Welcome to the CRUD API!');
+  });
+  
+app.use('/api/users', UserRoutes);
+app.use('/api/persons', PersonRoutes);
+app.use('/api/autos', AutoRoutes);
+
+
 
 // Conexión a la base de datos de MongoDB
 mongoose.connect(process.env.ATLAS_URI!)
