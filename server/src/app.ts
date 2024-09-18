@@ -27,6 +27,19 @@ app.use('/api/users', UserRoutes);
 app.use('/api/persons', PersonRoutes);
 app.use('/api/autos', AutoRoutes);
 
+// Configuración de la sesión con MongoStore
+app.use(session({
+    secret: process.env.SESSION_SECRET!,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 60 * 60 * 1000, // 1 hora
+    },
+    store: MongoStore.create({
+    mongoUrl: process.env.ATLAS_URI,
+    }),
+  }));
+
 // Conexión a la base de datos de MongoDB
 mongoose.connect(process.env.ATLAS_URI!)
   .then(() => console.log('Database connected'))
