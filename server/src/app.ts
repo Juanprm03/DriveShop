@@ -33,7 +33,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: {
-      maxAge: 60 * 60 * 1000, // 1 hora
+      maxAge: 60 * 60 * 1000, // 1 Hora
     },
     store: MongoStore.create({
     mongoUrl: process.env.ATLAS_URI,
