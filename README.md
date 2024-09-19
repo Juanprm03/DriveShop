@@ -1,5 +1,5 @@
 # DriveShop
-Este proyecto es una aplicación web de ecommerce para un concesionario de carros. La aplicación está construida utilizando Node.js con Express para el backend, MongoDB como base de datos, y Astro con React y Tailwind CSS para el frontend.
+Este proyecto es una aplicación web de ecommerce para un concesionario de Vehiculos. La aplicación está construida utilizando Node.js con Express para el backend, MongoDB como base de datos, y Astro con React y Tailwind CSS para el frontend.
 
 ## Tecnologías Utilizadas
 
