@@ -21,7 +21,7 @@ const Login: React.FC = () => {
       });
 
       if (response.ok) {
-        window.location.href = '/productos';
+        window.location.href = '/home';
       } else {
         const error = await response.json();
         setMessage(error.message || 'Credenciales inválidas. Intenta de nuevo.');

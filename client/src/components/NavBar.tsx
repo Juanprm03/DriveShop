@@ -8,7 +8,7 @@ function NavBar() {
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center space-x-4">
           <img
-            src="https://i.pinimg.com/originals/2a/df/74/2adf7403c9f7b54c0342e7ab94b586fa.png"
+            src="https://img.freepik.com/vector-gratis/plantilla-logotipo-concesionario-automoviles-degradado_23-2149334632.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1726531200&semt=ais_hybrid"
             alt="Logo del Concesionario"
             className="h-8 w-8"
           />

@@ -18,7 +18,7 @@ function Register() {
       const userData = { username, password, email };
   
       try {
-        const response = await fetch('http://localhost:5000/api/users', {
+        const response = await fetch('http://localhost:5000/api/users/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(userData),
@@ -29,7 +29,7 @@ function Register() {
           setUsername('');
           setPassword('');
           setEmail('');
-          window.location.href = '/';
+          window.location.href = '/home';
         } else {
           const errorData = await response.json();
           alert('Error al registrar: ' + errorData.message);

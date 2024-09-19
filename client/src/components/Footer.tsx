@@ -8,9 +8,6 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center">
           <p className="text-center text-sm mb-2">&copy; 2024 DriveShop. Conduce tu futuro hoy.</p>
           <p className="text-center text-sm mb-4"> ¡Tu próximo auto te espera!</p>
-          <div className="text-center mb-4">
-            <p className="text-sm">Desarrollado por Juan Pablo Ruiz Marin</p>
-          </div>
           <div className="flex justify-center space-x-6 mt-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
               <FaFacebook size={20} />
