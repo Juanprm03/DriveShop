@@ -9,7 +9,7 @@ Este proyecto es una aplicación web de ecommerce para un concesionario de Vehic
 
 ## Arquitectura
 
-### Descripción de Componentes Clave**:
+### Descripción de Componentes Clave:
 ### Backend:
 - **Controladores**: Manejan la lógica de negocio y las operaciones CRUD.
 - **Modelos**: Definen la estructura de los datos en MongoDB.
