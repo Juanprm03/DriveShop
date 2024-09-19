@@ -45,7 +45,7 @@ const RegisterAuto: React.FC = () => {
       <input type="text" id="marca" placeholder="Marca" required />
       <input type="text" id="modelo" placeholder="Modelo" required />
       <input type="number" id="year" placeholder="Año" required />
-      <input type="text" id="holder" placeholder="Titular" required />
+      <input type="text" id="holder" placeholder="ID Dueño" required />
       <input type="number" id="precio" placeholder="Precio" required />
       <input type="text" id="imagen" placeholder="URL de la imagen" required />
       <button type="submit">Registrar Auto</button>

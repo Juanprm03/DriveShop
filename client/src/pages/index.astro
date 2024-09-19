@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HomeComponent from './Home';
+import RegisterComponente from './Register';
+import NavBar from '../components/NavBar';
+---
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" />
+    
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <NavBar/>
+    <RegisterComponente client:load/>
+
+  </body>
+</html>
